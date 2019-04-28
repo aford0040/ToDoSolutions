@@ -1,18 +1,25 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import ToDoListItem from './ToDo';
 
-class ToDoList extends Component
+function ToDoList(props)
 {
-    render(props)
+    const [todos, setToDos] = useState({});
+
+    componentDiD
+
+    function GetToDos()
     {
+
+    }
+
         return (
             <ul>
-                {this.props.ToDoItems.map((content, index) => {
+                {
+                    props.ToDoItems.map((content, index) => {
                     return <ToDoListItem toDoItem={content}></ToDoListItem>
                 })}
             </ul>
             );        
-    }
 }
 
 export default ToDoList;
