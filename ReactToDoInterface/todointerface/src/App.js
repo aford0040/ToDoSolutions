@@ -23,7 +23,7 @@ class App extends Component {
         </table>
         <h1>Header</h1>
 
-    <ToDoList ToDoItems= {["some item", "another item", "more items still!!"]} />
+    <ToDoList />
 
       </div>
     );

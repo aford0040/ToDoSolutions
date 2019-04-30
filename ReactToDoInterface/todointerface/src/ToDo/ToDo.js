@@ -6,7 +6,14 @@ class ToDoListItem extends Component
 
     render(props) 
     { 
-        return <li>Thing to do: {this.props.toDoItem}</li>
+        return (
+        <li>
+            Id: {this.props.id} <br />
+            Title: {this.props.title} <br />
+            Description: {this.props.description} <br />
+            TimeAdded: {this.props.timeAdded}
+        </li>
+        )
     }
 }
 

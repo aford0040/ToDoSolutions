@@ -3,23 +3,21 @@ import ToDoListItem from './ToDo';
 
 function ToDoList(props)
 {
-    const [todos, setToDos] = useState({});
+    const [todos, setToDos] = useState(
+    () => 
+    fetch('http://localhost:52503/api/get/todos')
+    .then(response => response.json())
+    .then(data =>{
+        console.log(data);
+        setToDos(data)})
+    );
 
-    componentDiD
-
-    function GetToDos()
-    {
-
-    }
-
-        return (
-            <ul>
-                {
-                    props.ToDoItems.map((content, index) => {
-                    return <ToDoListItem toDoItem={content}></ToDoListItem>
-                })}
-            </ul>
-            );        
+    return (
+        <ul>
+            
+                <ToDoListItem todoItem={todos[0]}></ToDoListItem>
+        </ul>
+    );        
 }
 
 export default ToDoList;
